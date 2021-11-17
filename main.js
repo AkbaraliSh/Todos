@@ -29,7 +29,7 @@ elTodoList.addEventListener('click',evt=>{
    
 })
 
-
+let TodoLengeth;
 
 function renderTodo(arr,node){
    node.innerHTML=null;
@@ -59,13 +59,8 @@ function renderTodo(arr,node){
       
       
    });
+   TodoLengeth=arr.length
 }
-
-// // if(document.querySelector('.input__todo').value==' '){
-//    document.getElementById("Randomclick").disabled = true;
-// }else if(document.querySelector('.input__todo').value!==' '){
-//    document.getElementById("Randomclick").disabled =false;
-// }
 
 
 elRandomForm.addEventListener('submit',evt=>{
@@ -87,7 +82,7 @@ function Random(arr) {
    const elRandom__number=document.querySelector('.Random__number')
    
    for (let i = 0; i < elOutPutNumberValue; i++) {
-      let elrandom=Math.floor(Math.random() * 6000);
+      let elrandom=Math.floor(Math.random() * (Number(TodoLengeth)*1000));
       
       arr.push(elrandom)
       
@@ -124,12 +119,12 @@ elForm.addEventListener('submit',evt=>{
    };
    
    todos.push(newTodo);
-   
    renderTodo(todos,elTodoList);
    window.localStorage.setItem('todos',JSON.stringify(todos))
    
    elInput.value=null;
 })
+
 NextBtn.addEventListener('click',()=>{
    UserForm.style.display='none'
    RandomBlock.style.display='block'
@@ -139,24 +134,3 @@ NextBtn.addEventListener('click',()=>{
       
    }
 })
-// arr.filter(number=>{
-//    if(number>=0 && number<1000 ){
-//       // z.textContent++
-//    }
-//    if(number>=1000 && number<1999 && numberId.textContent==1){
-//      numberP.textContent=numberP.textContent+1
-//    }
-//    if(number>=2000 && number<2999){
-//       // d.textContent++
-//    }
-//    if(number>=3000 && number<3999){
-//       // f.textContent++
-//    }
-//    if(number>=4000 && number<4999){
-//       // a.textContent++
-//    }
-//    if(number>=5000 && number<5999  ){
-//       // q.textContent++
-//    }
-
-// })
