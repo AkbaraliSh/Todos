@@ -7,22 +7,30 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" >
     <link rel="stylesheet" href="./style.css">
     <title>Document</title>
+    <script src="//widget-feature.local" async></script>
 </head>
 <body>
+    <div class="Random" >
+        <form class="RandomForm" >
+            <input type="number" class="OutPutNumber" pattern="[0-9]{1}"  title="Qaytadan raqam kiriting" placeholder="Raqam kiriting" required>
+            <button type="submit" id="Randomclick" >Random</button>
+        </form>
+        <h1 class="randomNumber"></h1>
+    </div>
+   
     
-    
-    <form class="form">
-        <input class="input__todo" type="text" required placeholder="Type...">
-        <button class="button" type="submit">Submit</button>
-    </form>
+    <div class="userForm">
+        <form class="form">
+            <input class="input__todo" type="text" required placeholder="Foydalanuvchilarni kiriting">
+            <button class="button" type="submit" >Add</button>
+        </form>
+        <button type="submit" class="next-btn" >Next</button>
+    </div>
     
     <ul class="todolist"></ul>
+    <h2 class="Random__number"></h2>
+   
     
-    <ul class="checklist">
-        <button class="all">All <strong class="allstrong">0</strong></button>
-        <button class="completed">Completed <strong class="complatedstrong">0</strong></button>
-        <button class="active"> Active <strong class="activestrong">0</strong></p></button>
-    </ul>
     <script src="./main.js"></script>
 </body>
 </html>
