@@ -90,22 +90,27 @@ function Random(arr) {
    
    elRandom__number.textContent=String(arr.join(',').split(' '))
    
-   let numberP = document.querySelectorAll('.number')
-   let p1 = arr.filter(item=>item <= 1000 && item>0).length
-   let p2 = arr.filter(item=>item>1000 && item<1999 ).length
-   let p3 = arr.filter(item=>item>=2000 && item<2999).length
-   let p4= arr.filter(item=>item>=3000 && item<3999).length
-   let p5 = arr.filter(item=>item>=4000 && item<4999).length
-   let p6 = arr.filter(item=>item>=5000 && item<5999).length
+   // let numberP = document.querySelectorAll('.number')
+   // let p1 = arr.filter(item=>item <= 1000 && item>0).length
+   // let p2 = arr.filter(item=>item>1000 && item<1999 ).length
+   // let p3 = arr.filter(item=>item>=2000 && item<2999).length
+   // let p4= arr.filter(item=>item>=3000 && item<3999).length
+   // let p5 = arr.filter(item=>item>=4000 && item<4999).length
+   // let p6 = arr.filter(item=>item>=5000 && item<5999).length
    
    
    
-   numberP[0].textContent = p1
-   numberP[1].textContent = p2
-   numberP[2].textContent = p3
-   numberP[3].textContent = p4
-   numberP[4].textContent = p5
-   numberP[5].textContent = p6
+   // numberP[0].textContent = p1
+   // numberP[1].textContent = p2
+   // numberP[2].textContent = p3
+   // numberP[3].textContent = p4
+   // numberP[4].textContent = p5
+   // numberP[5].textContent = p6
+   for (let i = 0; i < TodoLengeth; i++) {
+      let numberP = document.querySelectorAll('.number')
+      numberP[i].textContent=arr.filter(row=>row>1000*i && row<=1000*(i+1)).length
+      
+   }
    
 }
 

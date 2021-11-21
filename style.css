@@ -83,3 +83,26 @@ p{
     font-size: 23px;
     margin-left: 10px;
 }
+@media screen and (max-width:375px) {
+    body{
+        margin-top: 50px;
+    }
+    .todolist{
+        width: 100px;
+        margin: 0 auto;
+        margin-left: 150px;
+        font-size: 16px;
+    }
+    .button{
+        font-size: 18px;
+        padding: 5px 15px;
+    }
+    .next-btn{
+        font-size: 18px;
+        padding: 5px 15px;
+    }
+    .text{
+        font-size: 20px;
+        margin-left: 7px;
+    }
+}
