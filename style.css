@@ -93,6 +93,15 @@ p{
         margin-left: 150px;
         font-size: 16px;
     }
+    .input__todo{
+        width: 120px;
+        padding:5px 7px;
+        font-size: 18px;
+    }
+    .input__todo::placeholder{
+        font-size: 18px;
+        
+    }
     .button{
         font-size: 18px;
         padding: 5px 15px;
